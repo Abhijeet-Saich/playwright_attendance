@@ -5,6 +5,11 @@ async function main() {
     const USER = process.env.GREYHR_USER;
     const PASSWORD = process.env.GREYHR_PASSWORD;
 
+    console.log(
+        "PLAYWRIGHT_BROWSERS_PATH =",
+        process.env.PLAYWRIGHT_BROWSERS_PATH
+    );
+
     const browser = await chromium.launch({
         headless: true,
         args: [
